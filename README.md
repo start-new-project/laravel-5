@@ -1,8 +1,7 @@
-## dev2vision team
-    team.dev2vision.com
+## start new project
+    Laravel 5.8 framework
 -----------------------------------------------------
-### facebook group : (git commands)
-https://web.facebook.com/groups/668699003307961/
+
 ### commands :
 ```sh
     ### push files
