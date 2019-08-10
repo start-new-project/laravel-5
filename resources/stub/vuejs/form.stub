@@ -1,0 +1,60 @@
+<template>
+    <div class="col-md-10 offset-md-1">
+      <div class="card">
+        <div class="card-header">
+          <div class="float-right"> 
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" name="active" type="checkbox" value="true" v-model="form.active"> {{$t('lib.active')}}
+              </label>
+            </div> 
+          </div>
+          <h4>{{$t('lib.{name}')}}</h4>
+        </div>
+        <div class="card-body">
+          <form @submit.prevent="save" @keydown="form.onKeydown($event)"> 
+
+            <div class="form-group">
+              <label>{{$t('lib.name')}}</label>
+              <input v-model="form.name" type="text" name="name"
+                  class="form-control" :class="{ 'is-invalid': form.errors.has('name') }">
+              <has-error :form="form" field="name"></has-error>
+            </div>    
+
+            <button :disabled="form.busy" type="submit" class="btn btn-sm   btn-success float-right">
+              <i class="fas fa-plus"></i> &nbsp; 
+              {{$t('lib.save')}}
+            </button>
+        </form>
+        </div>
+      </div>
+    </div> 
+    
+</template>
+
+<script> 
+
+
+export default {
+
+  data () {
+    return {
+      form: new Form({
+        name: '', 
+        active: false, 
+        busy: true
+      })
+    }
+  }, 
+  methods: {
+    save () { 
+      var url =  $('#api-route').attr('route')+'/{name}'
+      this.form.post(url)
+        .then(data=>{
+            this.$swal('Done', '{name} created successfuly', 'success');
+            this.$router.push({name:'admin.index'})
+        })
+    }
+  }
+} 
+</script>

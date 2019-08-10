@@ -1,0 +1,28 @@
+.drop-file-upload{
+    border: 2px dashed silver;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    line-height: 2;
+    font-size: 1.5em;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition-duration: 2s;
+    padding-top: 8vh;
+    &:hover{
+        opacity: 1;
+    }
+}
+.overflow-default{
+    overflow-y: auto;
+    height: 60vh;
+}
+.list-group{
+    .list-group-item{
+        padding: 0.35rem 1rem;
+        background-color: transparent!important;
+        border: none!important;
+    }
+}

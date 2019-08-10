@@ -1,0 +1,49 @@
+.img{
+    transition: all .2s ease-in-out;
+    &.img-xs{
+        width: 20px;
+        height: 20px;
+    }
+    &.img-sm{
+        width: 30px;
+        height: 30px;
+    }
+    &.img-md{
+        width: 100px;
+        height: 100px;
+    }
+    &.img-full{
+        min-width: 100%;
+        max-width: 100%;
+    }
+    &.img-card{
+        padding: .25rem;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: .25rem;
+        transition: all .2s ease-in-out;
+    }
+    &.img-click{
+        transition: all .2s ease-in-out;
+        &:hover{
+            border-color: rgba(0, 0, 0, 0.5);
+            opacity: 0.8;
+            cursor: pointer;
+        }
+    }
+    &.img-album{
+        box-shadow: 1px 1px 1px silver,
+                    5px 5px 0px white,
+                    6px 6px 1px silver,
+                    9px 9px 0px white,
+                    10px 10px 1px silver;
+        border-radius: .25rem;
+        padding: 0.25rem;
+        &:hover{
+            padding:0px;
+        }
+    }
+    &.img-hover{
+        cursor: pointer; 
+    }
+}

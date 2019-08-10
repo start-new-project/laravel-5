@@ -1,0 +1,142 @@
+.upload-pictures{
+    .upload-item{
+        width: 100px;
+        height: 100px;
+        border: 2px dashed silver;
+        margin: 5px;
+        float: left;
+        text-align: center;
+        &.upload-plus{
+            text-align: center;
+            cursor: pointer;
+            &:after{    
+                content: "+";
+                line-height: 3.2;
+                font-size: 30px;
+                color: silver;
+            }
+        }
+        img{
+            margin: 3%;
+            max-width: 95%;
+            min-width: 95%;
+            background-color: silver;
+            max-height: 90px;
+            min-height: 90px;
+        }
+        &:hover{
+            .delete{
+                opacity: 1;
+            }
+        }
+        .delete{
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 0px 5px;
+            margin: 8px;
+            font-size: 10px;
+            opacity: 0;
+            position: absolute;
+            z-index: 9999;
+            &:after{
+                content: 'x'
+            }
+        }
+        .progress-item{
+            position: absolute;
+            z-index: 99999;
+            font-size: 13px;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            line-height: 5;
+            text-align: center;
+            margin-left: -10px;
+            margin-top: -80px;
+        } 
+    }
+    .input-file{
+        display: none;
+    }
+}
+.upload-picture{
+    padding: 5px;
+    border: 2px dashed silver;
+    text-align: center;
+    cursor: pointer;
+    img{ 
+        width: 100%;
+        background-color: silver;
+    }
+    input[type=file]{
+        display: none;
+    }
+    .upload-progress{ 
+        z-index: 999999;
+        position: relative;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+    }
+    &.xs{     
+        width: 120px;
+        height: 120px;
+        img{
+            height: 105px;
+        }
+        .upload-progress{
+            top: -65px; 
+            font-size: 13px;
+        }
+    }
+    &.sm{  
+        width: 188px;
+        height: 188px;
+        img{
+            height: 173px;
+        }
+        .upload-progress{
+            top: -92px; 
+        }
+    }
+    &.md{
+        width: 200px;
+        height: 200px;
+        img{
+            height: 188px;
+        }
+        .upload-progress{
+            top: -100px; 
+        }
+    }
+    &.lg{ 
+        padding: 10px; 
+        height: 210px;
+        img{ 
+            height: 188px;  
+        }
+        .upload-progress{
+            top: -100px; 
+        }
+    }
+} 
+.upload-template{
+    max-width: 100%;
+    border: 1px solid silver;
+    input[type=file]{
+        display: none;
+    }
+}
+.show-template{
+    img{
+        display: none;
+        max-width: 100%;
+        min-width: 100%;
+        background-color: #eaeaea;
+    }
+}
+.album-template{
+    margin-top: 20px;
+    border-top: 2px solid rgba(0, 0, 0, 0.075);
+    padding-top: 20px;
+    display: none;
+}
